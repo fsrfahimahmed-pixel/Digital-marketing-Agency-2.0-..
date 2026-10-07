@@ -1,0 +1,15 @@
+{
+  "name": "nexora-growth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nexora Growth - Creative systems built to make attention convert",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo \"Build completed successfully\"",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
