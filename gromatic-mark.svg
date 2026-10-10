@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="gMarkBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="60%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="gMarkShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1D4ED8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Golden Orbit Paths & Nodes -->
+  <g transform="translate(10, 10)">
+    <path d="M 66 48 C 70 36, 94 30, 110 36" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <path d="M 70 52 C 90 38, 116 44, 122 62" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <path d="M 74 58 C 98 54, 118 68, 120 84" stroke="#F59E0B" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    
+    <circle cx="66" cy="48" r="3.6" fill="#F59E0B"/>
+    <circle cx="110" cy="36" r="4" fill="#F59E0B"/>
+    <circle cx="122" cy="62" r="4" fill="#F59E0B"/>
+    <circle cx="120" cy="84" r="3.6" fill="#F59E0B"/>
+
+    <!-- G-Arrow Symbol -->
+    <g filter="url(#gMarkShadow)">
+      <path d="M 94 48
+               A 42 42 0 1 0 98 94
+               L 68 94
+               L 98 64"
+            fill="none"
+            stroke="url(#gMarkBlue)"
+            stroke-width="17"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+      <polygon points="116,48 94,44 100,66" fill="url(#gMarkBlue)"/>
+    </g>
+  </g>
+</svg>

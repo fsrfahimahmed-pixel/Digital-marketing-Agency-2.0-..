@@ -2,11 +2,11 @@
 <html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NEXORA GROWTH — Creative Systems Built To Make Attention Convert</title>
-<meta name="description" content="Nexora Growth is a premium digital marketing agency. Creative systems built to make attention convert."/>
-<meta property="og:title" content="NEXORA GROWTH — Creative Systems Built To Make Attention Convert"/>
-<meta property="og:description" content="Nexora Growth is a premium digital marketing agency. Creative systems built to make attention convert."/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+<title>GROMATIC SPACE — Creative Systems Built To Make Attention Convert</title>
+<meta name="description" content="Gromatic Space is a premium digital marketing agency. Creative systems built to make attention convert."/>
+<meta property="og:title" content="GROMATIC SPACE — Creative Systems Built To Make Attention Convert"/>
+<meta property="og:description" content="Gromatic Space is a premium digital marketing agency. Creative systems built to make attention convert."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -38,8 +38,11 @@ tailwind.config = {
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <style>
   *{-webkit-tap-highlight-color:transparent}
-  html{background:#09090B}
-  body{background:#09090B;color:#F4F4EF;font-family:Inter,sans-serif;overflow-x:hidden}
+  *, *::before, *::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{background:#09090B;overflow-x:hidden;width:100%;max-width:100%}
+  body{background:#09090B;color:#F4F4EF;font-family:Inter,sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0;position:relative}
+  #view-main,#view-sub,main,section,footer,header{width:100%;max-width:100%;box-sizing:border-box}
+  section{overflow-x:clip}
   ::selection{background:#D4FF3F;color:#09090B}
   ::-webkit-scrollbar{width:10px;height:10px}
   ::-webkit-scrollbar-track{background:#09090B}
@@ -48,12 +51,16 @@ tailwind.config = {
   .font-display{font-family:Archivo,sans-serif}
   .grain::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:120;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
   .hairline{border:1px solid rgba(255,255,255,.08)}
+  #nav{transition:transform .38s cubic-bezier(.16,1,.3,1);will-change:transform}
+  #nav.nav-hidden{transform:translateY(-130%)}
+  #navInner{transition:box-shadow .3s,border-color .3s,background .3s}
+  #nav.nav-scrolled #navInner{background:rgba(18,18,20,.85);box-shadow:0 20px 50px rgba(0,0,0,.6);border-color:rgba(255,255,255,.14)}
   .glass{background:rgba(24,24,27,.62);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.09)}
   .glass2{background:rgba(18,18,20,.78);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.1)}
   .glass-lime{background:rgba(212,255,63,.08);backdrop-filter:blur(20px);border:1px solid rgba(212,255,63,.22)}
   .micro{font-family:Space Grotesk;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
-  .hero-h{font-family:Archivo;font-weight:900;line-height:.88;letter-spacing:-.04em;text-transform:uppercase;font-size:clamp(3.2rem,9.5vw,9.2rem)}
-  .h-sec{font-family:Archivo;font-weight:900;letter-spacing:-.03em;line-height:.92;text-transform:uppercase;font-size:clamp(2.2rem,5.5vw,4.8rem)}
+  .hero-h{font-family:Archivo;font-weight:900;line-height:.92;letter-spacing:-.04em;text-transform:uppercase;font-size:clamp(2.35rem,8.2vw,8.5rem);word-break:break-word}
+  .h-sec{font-family:Archivo;font-weight:900;letter-spacing:-.03em;line-height:.95;text-transform:uppercase;font-size:clamp(1.85rem,5.2vw,4.5rem);word-break:break-word}
   .outline-text{-webkit-text-stroke:1.5px rgba(255,255,255,.28);color:transparent}
   .lime-text{color:#D4FF3F}
   .btn-lime{background:#D4FF3F;color:#09090B;font-family:Space Grotesk;font-weight:700;letter-spacing:.06em;transition:.22s cubic-bezier(.34,1.56,.64,1)}
@@ -163,8 +170,8 @@ tailwind.config = {
   <div class="panel-top"></div><div class="panel-bottom"></div>
   <div class="pre-inner flex flex-col items-center gap-6 px-6 text-center">
     <div class="flex items-center gap-3">
-      <div class="w-11 h-11 rounded-xl bg-[#D4FF3F] flex items-center justify-center font-display font-black text-black text-xl">N</div>
-      <div class="text-left"><div class="font-display font-900 font-black tracking-tight text-xl leading-none">NEXORA</div><div class="micro text-muted mt-1">Growth Systems</div></div>
+      <img src="/gromatic-mark.svg" class="w-12 h-12 object-contain" alt="Gromatic Space"/>
+      <div class="text-left"><div class="font-display font-900 font-black tracking-tight text-xl leading-none">GROMATIC</div><div class="micro text-muted mt-1">Space</div></div>
     </div>
     <div class="micro text-muted">Building growth systems…</div>
     <div class="loader-bar"><span></span></div>
@@ -179,9 +186,9 @@ tailwind.config = {
 <header id="nav" class="fixed top-0 left-0 right-0 z-[80] transition-all duration-300">
   <div class="max-w-[1440px] mx-auto px-4 md:px-8">
     <div id="navInner" class="mt-3 md:mt-4 glass rounded-2xl px-4 md:px-6 h-[64px] flex items-center justify-between transition-all">
-      <a href="#/" data-nav class="flex items-center gap-3 group" aria-label="Nexora home">
-        <div class="w-9 h-9 rounded-lg bg-[#D4FF3F] flex items-center justify-center font-display font-black text-black text-lg group-hover:rotate-[-8deg] transition">N</div>
-        <div class="leading-none"><div class="font-display font-black tracking-tight text-[18px]">NEXORA</div><div class="micro !text-[9px] text-muted">Growth</div></div>
+      <a href="#/" data-nav class="flex items-center gap-3 group" aria-label="Gromatic Space home">
+        <img src="/gromatic-mark.svg" class="w-10 h-10 object-contain group-hover:rotate-[-6deg] transition drop-shadow-[0_0_12px_rgba(59,130,246,0.5)]" alt="Gromatic Space logo"/>
+        <div class="leading-none"><div class="font-display font-black tracking-tight text-[18px]">GROMATIC</div><div class="micro !text-[9px] text-[#38BDF8] font-bold">Space</div></div>
       </a>
       <nav class="hidden lg:flex items-center gap-8 micro !text-[12px] text-white/70" aria-label="Primary">
         <a href="#home" class="hover:text-[#D4FF3F] transition">Home</a>
@@ -193,10 +200,6 @@ tailwind.config = {
       </nav>
       <div class="flex items-center gap-3">
         <a href="#contact" class="btn-lime hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[13px]">Start a Project <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
-        <div class="relative">
-          <button id="dotsBtn" aria-label="More menu" aria-expanded="false" class="w-10 h-10 rounded-full hairline flex items-center justify-center hover:border-[#D4FF3F] hover:text-[#D4FF3F] transition"><i data-lucide="more-horizontal" class="w-5 h-5"></i></button>
-          <div id="dotsMenu" class="hidden absolute right-0 top-[52px] w-[260px] glass2 rounded-2xl p-2 shadow-2xl origin-top-right"></div>
-        </div>
         <button id="burger" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full bg-white text-black flex items-center justify-center"><i data-lucide="menu" class="w-5 h-5"></i></button>
       </div>
     </div>
@@ -204,15 +207,24 @@ tailwind.config = {
 </header>
 
 <!-- MOBILE MENU -->
-<div id="mobileMenu" class="fixed inset-0 z-[85] hidden">
-  <div class="absolute inset-0 bg-[#09090B]/85 backdrop-blur-2xl"></div>
-  <div class="relative h-full flex flex-col p-6 pt-5 max-w-[1440px] mx-auto">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-[#D4FF3F] flex items-center justify-center font-display font-black text-black">N</div><div class="font-display font-black">NEXORA</div></div>
-      <button id="mobileClose" aria-label="Close menu" class="w-12 h-12 rounded-full bg-[#D4FF3F] text-black flex items-center justify-center"><i data-lucide="x" class="w-6 h-6"></i></button>
+<div id="mobileMenu" class="fixed inset-0 z-[99] hidden">
+  <div class="absolute inset-0 bg-[#09090B]/95 backdrop-blur-2xl"></div>
+  <div class="relative min-h-[100dvh] h-[100dvh] overflow-y-auto flex flex-col p-5 sm:p-6 max-w-[1440px] mx-auto justify-between">
+    <div class="flex items-center justify-between shrink-0 pb-4 border-b border-white/10">
+      <div class="flex items-center gap-3">
+        <img src="/gromatic-mark.svg" class="w-9 h-9 object-contain" alt="Gromatic Space"/>
+        <div class="leading-none">
+          <div class="font-display font-black text-white text-[16px]">GROMATIC</div>
+          <div class="micro !text-[9px] text-[#38BDF8] font-bold">Space</div>
+        </div>
+      </div>
+      <button id="mobileClose" aria-label="Close menu" class="w-11 h-11 rounded-full bg-[#D4FF3F] text-black flex items-center justify-center hover:scale-105 active:scale-95 transition"><i data-lucide="x" class="w-6 h-6"></i></button>
     </div>
-    <nav id="mobileLinks" class="flex-1 flex flex-col justify-center gap-1"></nav>
-    <div class="flex gap-3"><a href="#contact" class="btn-lime flex-1 rounded-2xl py-4 text-center mobile-close-link">Start a Project</a><a href="#/login" class="btn-ghost flex-1 rounded-2xl py-4 text-center mobile-close-link">Client Login</a></div>
+    <nav id="mobileLinks" class="my-auto py-5 flex flex-col gap-2.5"></nav>
+    <div class="shrink-0 pt-4 border-t border-white/10">
+      <a href="#contact" class="btn-lime block w-full rounded-2xl py-3.5 text-center text-[15px] font-bold mobile-close-link shadow-[0_8px_25px_rgba(212,255,63,0.3)]">Start a Project →</a>
+      <div class="text-center micro text-white/40 text-[10px] mt-2.5">01331740859 • hello@gromaticspace.com</div>
+    </div>
   </div>
 </div>
 
@@ -223,9 +235,9 @@ tailwind.config = {
 <!-- HERO -->
 <section id="hero" class="relative min-h-[100svh] flex items-center pt-[110px] pb-10 overflow-hidden">
   <div class="absolute inset-0 grid-bg opacity-60"></div>
-  <div class="absolute -top-[200px] -left-[200px] w-[600px] h-[600px] rounded-full bg-[#D4FF3F]/[0.07] blur-[120px] pointer-events-none"></div>
-  <div class="absolute top-[20%] right-[-150px] w-[550px] h-[550px] rounded-full bg-[#7C5CFF]/[0.14] blur-[130px] pointer-events-none"></div>
-  <div class="absolute bottom-[-200px] left-[30%] w-[500px] h-[400px] rounded-full bg-[#4DE8FF]/[0.06] blur-[120px] pointer-events-none"></div>
+  <div class="absolute -top-[200px] -left-[200px] w-[min(600px,100vw)] h-[min(600px,100vw)] rounded-full bg-[#D4FF3F]/[0.07] blur-[120px] pointer-events-none"></div>
+  <div class="absolute top-[20%] -right-10 md:-right-[150px] w-[min(550px,100vw)] h-[min(550px,100vw)] rounded-full bg-[#7C5CFF]/[0.14] blur-[130px] pointer-events-none"></div>
+  <div class="absolute bottom-[-200px] left-[10%] w-[min(500px,100vw)] h-[min(400px,100vw)] rounded-full bg-[#4DE8FF]/[0.06] blur-[120px] pointer-events-none"></div>
   <div class="absolute top-[18%] left-[6%] micro text-white/30 hidden md:flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-[#D4FF3F] animate-pulse"></span> Accepting Q4 Growth Partners — 3 slots</div>
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block text-white/30 text-[10px] tracking-[.3em] uppercase font-grotesk">Scroll</div>
 
@@ -291,7 +303,7 @@ tailwind.config = {
 </section>
 
 <!-- HERO METRICS -->
-<section class="border-y border-white/[0.07] bg-[#0E0E10]">
+<section class="border-y border-white/[0.07] bg-[#0E0E10] overflow-hidden w-full">
   <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
     <div class="rv"><div class="font-display font-black text-[42px] md:text-[54px] leading-none"><span class="count" data-count="120">0</span>+</div><div class="micro text-muted mt-2">Campaigns launched*</div></div>
     <div class="rv rv-d1"><div class="font-display font-black text-[42px] md:text-[54px] leading-none"><span class="count" data-count="48">0</span>+</div><div class="micro text-muted mt-2">Brands partnered*</div></div>
@@ -302,17 +314,17 @@ tailwind.config = {
 </section>
 
 <!-- TRUSTED BY -->
-<section class="py-10 overflow-hidden">
+<section class="py-10 overflow-hidden w-full">
   <div class="text-center micro text-white/40 mb-6">Trusted by ambitious teams</div>
-  <div class="relative">
-    <div class="absolute left-0 top-0 bottom-0 w-[120px] bg-gradient-to-r from-[#09090B] to-transparent z-10"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-[120px] bg-gradient-to-l from-[#09090B] to-transparent z-10"></div>
+  <div class="relative w-full overflow-hidden">
+    <div class="absolute left-0 top-0 bottom-0 w-[120px] bg-gradient-to-r from-[#09090B] to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-[120px] bg-gradient-to-l from-[#09090B] to-transparent z-10 pointer-events-none"></div>
     <div class="marquee-track gap-14 items-center px-6" id="brandStrip"></div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-20 md:py-28 relative">
+<section id="services" class="py-20 md:py-28 relative overflow-hidden w-full">
   <div class="max-w-[1440px] mx-auto px-4 md:px-8">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
       <div><div class="rv micro text-[#D4FF3F] flex items-center gap-3 mb-4"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>01 — Services</div>
@@ -331,7 +343,7 @@ tailwind.config = {
     <div>
       <div class="rv micro text-[#D4FF3F] flex items-center gap-3 mb-5"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>02 — Who we are</div>
       <h2 class="rv h-sec">We combine creative instinct with <span class="outline-text">performance</span> discipline.</h2>
-      <p class="rv rv-d1 mt-6 text-white/60 text-[16px] leading-relaxed max-w-[540px]">Nexora was built by media buyers who got tired of pretty reports and designers who got tired of ugly ads. Today we're a 14-person team running full-funnel growth for e-commerce, local and B2B brands across the UK, US and Gulf. No juniors learning on your budget. No 40-slide decks. Strategy, creative and media in one weekly sprint.</p>
+      <p class="rv rv-d1 mt-6 text-white/60 text-[16px] leading-relaxed max-w-[540px]">Gromatic Space was built by media buyers who got tired of pretty reports and designers who got tired of ugly ads. Today we're a 14-person team running full-funnel growth for e-commerce, local and B2B brands across the UK, US and Gulf. No juniors learning on your budget. No 40-slide decks. Strategy, creative and media in one weekly sprint.</p>
       <div class="rv rv-d2 mt-8 grid grid-cols-3 gap-4 max-w-[540px]">
         <div class="hairline rounded-2xl p-4 bg-white/[0.02]"><div class="font-display font-black text-2xl">14</div><div class="micro !text-[10px] text-muted mt-1">Senior operators</div></div>
         <div class="hairline rounded-2xl p-4 bg-white/[0.02]"><div class="font-display font-black text-2xl text-[#D4FF3F]">6</div><div class="micro !text-[10px] text-muted mt-1">Countries served</div></div>
@@ -354,16 +366,16 @@ tailwind.config = {
 </section>
 
 <!-- WHY US -->
-<section class="py-20 md:py-28">
+<section class="py-20 md:py-28 overflow-hidden w-full">
   <div class="max-w-[1440px] mx-auto px-4 md:px-8">
-    <div class="rv micro text-[#D4FF3F] flex items-center gap-3 mb-4"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>03 — Why Nexora</div>
+    <div class="rv micro text-[#D4FF3F] flex items-center gap-3 mb-4"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>03 — Why Gromatic Space</div>
     <h2 class="rv h-sec mb-10">Principles we<br/>actually <span class="lime-text">operate on.</span></h2>
     <div id="whyGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
   </div>
 </section>
 
 <!-- INDUSTRIES -->
-<section class="py-20 md:py-24 bg-[#0E0E10] border-y border-white/[0.07]">
+<section class="py-20 md:py-24 bg-[#0E0E10] border-y border-white/[0.07] overflow-hidden w-full">
   <div class="max-w-[1440px] mx-auto px-4 md:px-8 grid lg:grid-cols-[.9fr_1.1fr] gap-10">
     <div><div class="rv micro text-[#D4FF3F] flex items-center gap-3 mb-4"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>04 — Industries</div>
       <h2 class="rv h-sec">Deep reps<br/>in your<br/>arena.</h2>
@@ -442,7 +454,7 @@ tailwind.config = {
 </section>
 
 <!-- TEAM -->
-<section id="team" class="py-20 md:py-28">
+<section id="team" class="py-20 md:py-28 overflow-hidden w-full">
   <div class="max-w-[1440px] mx-auto px-4 md:px-8">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10"><div><div class="rv micro text-[#D4FF3F] flex items-center gap-3 mb-4"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>07 — Team</div><h2 class="rv h-sec">Operators,<br/>not account managers.</h2></div><div class="rv micro text-white/40">Swipe on mobile →</div></div>
     <div id="teamTrack" class="rv flex lg:grid lg:grid-cols-6 gap-4 overflow-x-auto no-scrollbar snap-x -mx-4 px-4 md:mx-0 md:px-0"></div>
@@ -467,7 +479,7 @@ tailwind.config = {
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="py-20 md:py-28">
+<section id="pricing" class="py-20 md:py-28 overflow-hidden w-full">
   <div class="max-w-[1200px] mx-auto px-4 md:px-8">
     <div class="text-center"><div class="rv micro text-[#D4FF3F] mb-4 justify-center flex items-center gap-3"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>09 — Pricing<span class="w-8 h-[1px] bg-[#D4FF3F]"></span></div>
     <h2 class="rv h-sec">Simple plans.<br/>Serious output.</h2>
@@ -478,7 +490,7 @@ tailwind.config = {
 </section>
 
 <!-- INSIGHTS -->
-<section id="insights" class="py-20 md:py-24 bg-[#0E0E10] border-y border-white/[0.07]">
+<section id="insights" class="py-20 md:py-24 bg-[#0E0E10] border-y border-white/[0.07] overflow-hidden w-full">
   <div class="max-w-[1440px] mx-auto px-4 md:px-8">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10"><div><div class="rv micro text-[#D4FF3F] flex items-center gap-3 mb-4"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>10 — Insights</div><h2 class="rv h-sec">Thinking that<br/>pays for itself.</h2></div><a href="#insights" class="rv btn-ghost rounded-full px-6 py-3 text-[13px] font-grotesk">View all articles</a></div>
     <div id="insightGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
@@ -486,7 +498,7 @@ tailwind.config = {
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="py-20 md:py-28">
+<section id="faq" class="py-20 md:py-28 overflow-hidden w-full">
   <div class="max-w-[860px] mx-auto px-4 md:px-8">
     <div class="text-center mb-10"><div class="rv micro text-[#D4FF3F] mb-4">11 — FAQ</div><h2 class="rv h-sec !text-[clamp(2rem,5vw,3.6rem)]">Straight answers.</h2></div>
     <div id="faqList" class="space-y-3"></div>
@@ -494,7 +506,7 @@ tailwind.config = {
 </section>
 
 <!-- FINAL CTA -->
-<section class="px-4 md:px-8 pb-6">
+<section class="px-4 md:px-8 pb-6 overflow-hidden w-full">
   <div class="rv max-w-[1440px] mx-auto rounded-[32px] overflow-hidden relative bg-[#D4FF3F] text-black p-10 md:p-20 text-center">
     <div class="absolute inset-0 opacity-[0.07] grid-bg"></div>
     <div class="relative"><div class="micro !text-black/60 mb-4">Ready when you are</div>
@@ -505,13 +517,13 @@ tailwind.config = {
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 md:py-28">
+<section id="contact" class="py-20 md:py-28 overflow-hidden w-full">
   <div class="max-w-[1200px] mx-auto px-4 md:px-8 grid lg:grid-cols-[.85fr_1.15fr] gap-10">
     <div><div class="rv micro text-[#D4FF3F] flex items-center gap-3 mb-4"><span class="w-8 h-[1px] bg-[#D4FF3F]"></span>12 — Contact</div>
       <h2 class="rv h-sec">Let's build something worth talking about.</h2>
       <p class="rv mt-5 text-white/60">Tell us where you are and where you need to be. We'll reply with honest next steps — even if we're not the right fit.</p>
       <div class="rv mt-8 space-y-4 text-[14px]">
-        <div class="flex items-center gap-3 glass rounded-2xl p-4"><div class="w-10 h-10 rounded-full bg-[#D4FF3F] text-black flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5"></i></div><div><div class="micro !text-[10px] text-muted">Email</div><div class="font-bold">hello@nexoragrowth.co</div></div></div>
+        <div class="flex items-center gap-3 glass rounded-2xl p-4"><div class="w-10 h-10 rounded-full bg-[#D4FF3F] text-black flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5"></i></div><div><div class="micro !text-[10px] text-muted">Email</div><div class="font-bold">hello@gromaticspace.com</div></div></div>
         <div class="flex items-center gap-3 glass rounded-2xl p-4"><div class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5"></i></div><div><div class="micro !text-[10px] text-muted">Phone / WhatsApp</div><div class="font-bold"><a href="tel:01331740859" class="hover:text-[#D4FF3F] transition">01331740859</a></div></div></div>
         <div class="flex items-center gap-3 glass rounded-2xl p-4"><div class="w-10 h-10 rounded-full bg-[#7C5CFF] text-white flex items-center justify-center"><i data-lucide="clock" class="w-5 h-5"></i></div><div><div class="micro !text-[10px] text-muted">Response time</div><div class="font-bold">Within 1 business day</div></div></div>
       </div>
@@ -527,7 +539,7 @@ tailwind.config = {
 </section>
 
 <!-- NEWSLETTER -->
-<section class="px-4 md:px-8 pb-20">
+<section class="px-4 md:px-8 pb-20 overflow-hidden w-full">
   <div class="max-w-[1200px] mx-auto hairline rounded-[28px] p-8 md:p-12 bg-gradient-to-br from-[#18181B] to-[#0E0E10] flex flex-col md:flex-row items-center gap-8">
     <div class="flex-1"><h3 class="font-display font-black text-[28px] md:text-[36px] leading-tight">Useful growth ideas.<br/><span class="text-[#D4FF3F]">No noise.</span></h3><p class="text-white/50 text-[14px] mt-2">One tactical email every two weeks. Read by 4,200+ founders.</p></div>
     <div class="flex-1 w-full"><div id="newsWrap" class="flex flex-col sm:flex-row gap-3"><input id="newsEmail" type="email" placeholder="you@company.com" class="flex-1 bg-white/[0.05] border border-white/15 rounded-full px-6 py-4 outline-none focus:border-[#D4FF3F] transition text-[14px]"/><button id="newsBtn" class="btn-lime rounded-full px-8 py-4 text-[13px] whitespace-nowrap">Subscribe</button></div><div id="newsOk" class="hidden items-center gap-3 bg-[#D4FF3F]/10 border border-[#D4FF3F]/30 rounded-2xl p-5"><div class="w-10 h-10 rounded-full bg-[#D4FF3F] text-black flex items-center justify-center"><i data-lucide="check" class="w-5 h-5"></i></div><div><div class="font-bold">You're in.</div><div class="text-[13px] text-white/60">First issue lands this Friday.</div></div></div></div>
@@ -535,16 +547,16 @@ tailwind.config = {
 </section>
 
 <!-- FOOTER -->
-<footer class="border-t border-white/[0.07] bg-[#060607] pt-16 pb-8">
+<footer class="border-t border-white/[0.07] bg-[#060607] pt-16 pb-8 overflow-hidden w-full">
   <div class="max-w-[1440px] mx-auto px-4 md:px-8">
     <h2 class="font-display font-black uppercase leading-[.9] text-[clamp(2rem,6vw,5rem)] tracking-tight">Let's build<br/>something <span class="lime-text">worth talking</span> about.</h2>
     <div class="mt-10 grid md:grid-cols-4 gap-8 text-[14px]">
-      <div><div class="flex items-center gap-3 mb-4"><div class="w-9 h-9 rounded-lg bg-[#D4FF3F] flex items-center justify-center font-display font-black text-black">N</div><div class="font-display font-black">NEXORA GROWTH</div></div><p class="text-white/50">Creative systems built to make attention convert. London • New York • Dubai</p><div class="flex gap-2 mt-4"><a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black transition"><i data-lucide="instagram" class="w-4 h-4"></i></a><a href="#" aria-label="Linkedin" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a><a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black transition"><i data-lucide="twitter" class="w-4 h-4"></i></a><a href="#" aria-label="Youtube" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black transition"><i data-lucide="youtube" class="w-4 h-4"></i></a></div></div>
+      <div><div class="flex items-center gap-3 mb-4"><img src="/gromatic-mark.svg" class="w-10 h-10 object-contain drop-shadow-[0_0_12px_rgba(59,130,246,0.4)]" alt="Gromatic Space logo"/><div class="font-display font-black text-[18px]">GROMATIC SPACE</div></div><p class="text-white/50">Creative systems built to make attention convert. London • New York • Dubai</p><div class="flex gap-2 mt-4"><a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black transition"><i data-lucide="instagram" class="w-4 h-4"></i></a><a href="#" aria-label="Linkedin" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a><a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black transition"><i data-lucide="twitter" class="w-4 h-4"></i></a><a href="#" aria-label="Youtube" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black transition"><i data-lucide="youtube" class="w-4 h-4"></i></a></div></div>
       <div><div class="micro text-white/40 mb-4">Explore</div><div class="space-y-2.5 text-white/70"><a href="#services" class="block hover:text-[#D4FF3F]">Services</a><a href="#work" class="block hover:text-[#D4FF3F]">Work</a><a href="#pricing" class="block hover:text-[#D4FF3F]">Pricing</a><a href="#insights" class="block hover:text-[#D4FF3F]">Insights</a><a href="#faq" class="block hover:text-[#D4FF3F]">FAQ</a></div></div>
-      <div><div class="micro text-white/40 mb-4">Company</div><div class="space-y-2.5 text-white/70"><a href="#about" class="block hover:text-[#D4FF3F]">About</a><a href="#process" class="block hover:text-[#D4FF3F]">Process</a><a href="#team" class="block hover:text-[#D4FF3F]">Team</a><a href="#contact" class="block hover:text-[#D4FF3F]">Contact</a><a href="#/login" class="block hover:text-[#D4FF3F]">Client Portal →</a></div></div>
+      <div><div class="micro text-white/40 mb-4">Company</div><div class="space-y-2.5 text-white/70"><a href="#about" class="block hover:text-[#D4FF3F]">About</a><a href="#process" class="block hover:text-[#D4FF3F]">Process</a><a href="#team" class="block hover:text-[#D4FF3F]">Team</a><a href="#contact" class="block hover:text-[#D4FF3F]">Contact</a></div></div>
       <div><div class="micro text-white/40 mb-4">Legal</div><div class="space-y-2.5 text-white/70"><a href="#" class="block hover:text-[#D4FF3F]">Privacy Policy</a><a href="#" class="block hover:text-[#D4FF3F]">Terms of Service</a><a href="#" class="block hover:text-[#D4FF3F]">Cookie Settings</a></div><a href="#contact" class="btn-lime rounded-full px-6 py-3 text-[12px] inline-flex mt-5">Start a Project</a></div>
     </div>
-    <div class="mt-12 pt-6 border-t border-white/[0.07] flex flex-col md:flex-row justify-between gap-3 text-[12px] text-white/35 font-grotesk"><span>© 2026 Nexora Growth Ltd. All rights reserved.</span><span>Designed & engineered in-house • Phase 1 marketing site</span></div>
+    <div class="mt-12 pt-6 border-t border-white/[0.07] flex flex-col md:flex-row justify-between gap-3 text-[12px] text-white/35 font-grotesk"><span>© 2026 Gromatic Space Ltd. All rights reserved.</span><span>Designed & engineered in-house • Phase 1 marketing site</span></div>
   </div>
 </footer>
 </main>
@@ -569,7 +581,7 @@ tailwind.config = {
 <div id="chatPanel" class="glass2 rounded-[24px] overflow-hidden flex flex-col" role="dialog" aria-label="Assistant">
   <div class="p-4 bg-gradient-to-r from-[#18181B] to-[#1F1F23] border-b border-white/10 flex items-center gap-3">
     <div class="w-10 h-10 rounded-full bg-[#D4FF3F] flex items-center justify-center font-display font-black text-black">N</div>
-    <div class="flex-1"><div class="font-bold text-[14px]">Nexora Assistant</div><div class="text-[11px] text-[#D4FF3F] flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#D4FF3F] animate-pulse"></span> Online • replies instantly</div></div>
+    <div class="flex-1"><div class="font-bold text-[14px]">Gromatic Space Assistant</div><div class="text-[11px] text-[#D4FF3F] flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#D4FF3F] animate-pulse"></span> Online • replies instantly</div></div>
     <button onclick="toggleChat(false)" aria-label="Minimize" class="w-9 h-9 rounded-full hairline flex items-center justify-center hover:bg-white/10"><i data-lucide="minus" class="w-4 h-4"></i></button>
   </div>
   <div class="flex gap-2 p-3 border-b border-white/10">
@@ -586,7 +598,7 @@ tailwind.config = {
     </div>
     <div class="grid grid-cols-2 gap-2">
       <a href="#contact" onclick="toggleChat(false)" class="rounded-xl bg-[#D4FF3F] text-black text-center py-3 text-[12px] font-bold">Contact form</a>
-      <a href="mailto:hello@nexoragrowth.co" class="rounded-xl hairline text-center py-3 text-[12px] font-bold hover:border-[#D4FF3F]">Email us</a>
+      <a href="mailto:hello@gromaticspace.com" class="rounded-xl hairline text-center py-3 text-[12px] font-bold hover:border-[#D4FF3F]">Email us</a>
       <a href="tel:01331740859" class="rounded-xl hairline text-center py-3 text-[12px] font-bold hover:border-[#D4FF3F]">Call: 01331740859</a>
       <a href="https://wa.me/8801331740859" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366] text-center py-3 text-[12px] font-bold">WhatsApp</a>
     </div>
@@ -602,12 +614,12 @@ tailwind.config = {
 
 <script>
 /* ============================================================
-  NEXORA GROWTH — Phase 1 Frontend
+  GROMATIC SPACE — Phase 1 Frontend
   Centralized data (Future: populate from database)
   Form abstraction: submitProjectInquiry(payload)
   Future: connect to API | Future: role-based routing
 ============================================================ */
-const siteConfig = { brand:"Nexora Growth", email:"hello@nexoragrowth.co", phone:"01331740859", tagline:"Creative systems built to make attention convert." };
+const siteConfig = { brand:"Gromatic Space", email:"hello@gromaticspace.com", phone:"01331740859", tagline:"Creative systems built to make attention convert." };
 
 const servicesData = [
   {icon:"target", name:"Digital Strategy", desc:"A revenue roadmap before a single pound is spent.", benefit:"Know exactly what to do, in what order.", deliverables:["Growth audit & opportunity map","90-day channel plan","Forecast model + KPIs"], outcome:"+32% avg. efficiency in 60 days"},
@@ -642,7 +654,7 @@ const teamData = [
   {name:"Marcus Chen", role:"Designer / Motion", img:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80", tag:"Ads • Landing • Motion"},
 ];
 const testimonialsData = [
-  {quote:"Nexora rebuilt our entire acquisition engine in three weeks. CAC dropped 38% while we tripled spend. First agency that talks revenue, not impressions.", name:"Hannah Cole", role:"Founder, Nova Skin", img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"},
+  {quote:"Gromatic Space rebuilt our entire acquisition engine in three weeks. CAC dropped 38% while we tripled spend. First agency that talks revenue, not impressions.", name:"Hannah Cole", role:"Founder, Nova Skin", img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"},
   {quote:"They operate like an in-house team with superpowers. Weekly sprints, clear reporting, creative that actually converts. Viewings up 68% in a quarter.", name:"Daniel Okafor", role:"Director, Urbankey", img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"},
   {quote:"Our organic bookings went from trickle to flood. Six locations ranking #1 locally. The review + GBP system alone paid for the engagement.", name:"Dr. Sarah Lindqvist", role:"Director, Cliniq", img:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"},
   {quote:"From $48 to $21 CAC in five months. Their SEO + demo CRO work completely changed our pipeline economics. Board-level impact.", name:"James Whitfield", role:"CEO, Futurelab", img:"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80"},
@@ -712,19 +724,66 @@ setTimeout(()=>{ const p=$('#preloader'); if(p){p.classList.add('done'); setTime
   document.addEventListener('mouseover',e=>{ const t=e.target.closest('[data-cursor]'); if(t){ ring.classList.add('big'); label.textContent=t.dataset.cursor||'View'; } else { const h=e.target.closest('a,button'); if(h){ring.style.borderColor='#D4FF3F';ring.style.width='52px';ring.style.height='52px';} else {ring.classList.remove('big');ring.style.width='';ring.style.height='';ring.style.borderColor='';} } });
 })();
 
-/* ---------- nav ---------- */
-const dotsLinks=[["Client Portal","#/login","log-in"],["Pricing","#pricing","tag"],["Insights","#insights","newspaper"],["FAQ","#faq","help-circle"],["Contact","#contact","mail"]];
-$('#dotsMenu').innerHTML = dotsLinks.map(([t,h,i],ix)=>`<a href="${h}" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#D4FF3F]/10 hover:text-[#D4FF3F] transition text-[14px] font-medium dots-link" style="animation-delay:${ix*40}ms"><i data-lucide="${i}" class="w-4 h-4"></i>${t}</a>`).join('');
-const dotsBtn=$('#dotsBtn'), dotsMenu=$('#dotsMenu');
-dotsBtn.onclick=e=>{e.stopPropagation();const open=dotsMenu.classList.toggle('hidden');dotsBtn.setAttribute('aria-expanded',!open);if(!open){dotsMenu.style.animation='tin .3s cubic-bezier(.34,1.56,.64,1)';}};
-document.addEventListener('click',e=>{if(!dotsMenu.classList.contains('hidden')&&!e.target.closest('#dotsMenu')&&!e.target.closest('#dotsBtn'))dotsMenu.classList.add('hidden')});
-$$('.dots-link').forEach(a=>a.onclick=()=>dotsMenu.classList.add('hidden'));
-addEventListener('scroll',()=>{ $('#navInner').style.boxShadow = scrollY>30?'0 20px 60px rgba(0,0,0,.5)':''; },{passive:true});
-const mLinks=["Home|#home","Services|#services","Work|#work","About|#about","Process|#process","Contact|#contact"];
-$('#mobileLinks').innerHTML=mLinks.map(([pair],i)=>{const[t,h]=pair.split('|');return `<a href="${h}" class="mobile-close-link font-display font-black uppercase text-[clamp(2rem,9vw,3.2rem)] leading-[1.05] hover:text-[#D4FF3F] transition" style="opacity:0;transform:translateY(20px);transition:.5s ${i*60}ms">${t}</a>`}).join('');
-function openMobile(o){ const m=$('#mobileMenu'); m.classList.toggle('hidden',!o); document.body.style.overflow=o?'hidden':''; if(o) requestAnimationFrame(()=>$$('#mobileLinks a').forEach(a=>{a.style.opacity='1';a.style.transform='none'})); }
-$('#burger').onclick=()=>openMobile(true); $('#mobileClose').onclick=()=>openMobile(false);
-$$('.mobile-close-link').forEach(a=>a.onclick=()=>openMobile(false));
+/* ---------- nav (smart scroll: hide down, reveal up) ---------- */
+let lastScrollY = window.scrollY || 0;
+let ticking = false;
+const navEl = $('#nav');
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const currentScrollY = Math.max(0, window.scrollY);
+      const scrollDiff = currentScrollY - lastScrollY;
+      const isMobileMenuOpen = !$('#mobileMenu').classList.contains('hidden');
+
+      if (currentScrollY <= 40) {
+        navEl.classList.remove('nav-hidden');
+        navEl.classList.remove('nav-scrolled');
+      } else {
+        navEl.classList.add('nav-scrolled');
+        if (scrollDiff > 8 && currentScrollY > 100 && !isMobileMenuOpen) {
+          navEl.classList.add('nav-hidden');
+        } else if (scrollDiff < -6) {
+          navEl.classList.remove('nav-hidden');
+        }
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+const mLinks = [
+  { name: "Home", href: "#home", num: "01" },
+  { name: "Services", href: "#services", num: "02" },
+  { name: "Work", href: "#work", num: "03" },
+  { name: "About", href: "#about", num: "04" },
+  { name: "Process", href: "#process", num: "05" },
+  { name: "Contact", href: "#contact", num: "06" }
+];
+function renderMobileNav() {
+  const container = $('#mobileLinks');
+  if (!container) return;
+  container.innerHTML = mLinks.map(item => `
+    <a href="${item.href}" class="mobile-close-link flex items-center justify-between py-3.5 px-4 rounded-2xl border border-white/10 bg-white/[0.04] active:bg-[#D4FF3F]/15 text-white hover:text-[#D4FF3F] hover:border-[#D4FF3F]/40 transition group">
+      <div class="flex items-center gap-3">
+        <span class="micro text-[#D4FF3F] font-bold text-[11px]">${item.num}</span>
+        <span class="font-display font-black uppercase text-[20px] sm:text-[24px] tracking-tight text-white group-hover:text-[#D4FF3F] transition">${item.name}</span>
+      </div>
+      <span class="text-[#D4FF3F] font-bold text-lg group-hover:translate-x-1 transition">→</span>
+    </a>
+  `).join('');
+  $$('.mobile-close-link').forEach(a => a.onclick = () => openMobile(false));
+}
+renderMobileNav();
+function openMobile(o){
+  const m = $('#mobileMenu');
+  if (!m) return;
+  m.classList.toggle('hidden', !o);
+  document.body.style.overflow = o ? 'hidden' : '';
+  if (o) lucide.createIcons();
+}
+$('#burger').onclick = () => openMobile(true);
+$('#mobileClose').onclick = () => openMobile(false);
 
 /* ---------- reveal + counters ---------- */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
@@ -885,7 +944,7 @@ $('#insightGrid').innerHTML=insightsData.map((a,i)=>`
     <div class="p-6"><h3 class="font-display font-extrabold text-[18px] leading-snug group-hover:text-[#D4FF3F] transition">${a.title}</h3><p class="text-[13px] text-white/55 mt-2">${a.ex}</p><div class="flex items-center justify-between mt-4 text-[12px] text-white/40 font-grotesk"><span>${a.time} • ${a.date}</span><span class="text-[#D4FF3F] font-bold">Read →</span></div></div>
   </article>`).join('') + `<article class="rv glass rounded-3xl p-8 flex flex-col justify-center items-start border-dashed"><div class="micro text-[#D4FF3F]">Newsletter</div><h3 class="font-display font-black text-[24px] mt-2">Get one tactic<br/>every 2 weeks.</h3><a href="#contact" class="btn-lime rounded-full px-6 py-3 text-[12px] mt-5">Subscribe free</a></article>`;
 $$('#insightGrid [data-ins]').forEach(c=>{ const open=()=>{ const a=insightsData[+c.dataset.ins];
-  $('#modalContent').innerHTML=`<div class="relative h-[240px]"><img src="${a.img}" class="w-full h-full object-cover" alt=""/><div class="absolute inset-0 bg-gradient-to-t from-[#121214] to-transparent"></div><button onclick="closeAll()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 backdrop-blur flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black"><i data-lucide="x" class="w-5 h-5"></i></button><span class="absolute bottom-4 left-7 micro !text-[10px] px-3 py-1.5 rounded-full bg-[#D4FF3F] text-black font-bold">${a.cat}</span></div><div class="p-7 md:p-10"><h3 class="font-display font-black text-[28px] leading-tight">${a.title}</h3><div class="micro text-white/40 mt-3">${a.time} • ${a.date} • By Nexora Strategy Team</div><p class="text-white/65 mt-5 leading-relaxed">${a.ex} This is a Phase-1 article placeholder shell — full long-form publishing (routes /insights/*) ships in the next build phase with CMS content. The framework, examples and templates referenced are delivered on your intro call today.</p><div class="hairline rounded-2xl p-5 mt-6 bg-[#D4FF3F]/[0.06] border-[#D4FF3F]/25 text-[14px]"><b class="text-[#D4FF3F]">Key takeaway:</b> Start with the offer and hook — channel tactics multiply what already converts.</div><a href="#contact" onclick="closeAll()" class="btn-lime rounded-full w-full py-4 mt-6 flex items-center justify-center gap-2 text-[13px]">Get the full playbook <i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>`; lucide.createIcons(); $('#modal').classList.add('show'); document.body.style.overflow='hidden'; };
+  $('#modalContent').innerHTML=`<div class="relative h-[240px]"><img src="${a.img}" class="w-full h-full object-cover" alt=""/><div class="absolute inset-0 bg-gradient-to-t from-[#121214] to-transparent"></div><button onclick="closeAll()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/60 backdrop-blur flex items-center justify-center hover:bg-[#D4FF3F] hover:text-black"><i data-lucide="x" class="w-5 h-5"></i></button><span class="absolute bottom-4 left-7 micro !text-[10px] px-3 py-1.5 rounded-full bg-[#D4FF3F] text-black font-bold">${a.cat}</span></div><div class="p-7 md:p-10"><h3 class="font-display font-black text-[28px] leading-tight">${a.title}</h3><div class="micro text-white/40 mt-3">${a.time} • ${a.date} • By Gromatic Strategy Team</div><p class="text-white/65 mt-5 leading-relaxed">${a.ex} This is a Phase-1 article placeholder shell — full long-form publishing (routes /insights/*) ships in the next build phase with CMS content. The framework, examples and templates referenced are delivered on your intro call today.</p><div class="hairline rounded-2xl p-5 mt-6 bg-[#D4FF3F]/[0.06] border-[#D4FF3F]/25 text-[14px]"><b class="text-[#D4FF3F]">Key takeaway:</b> Start with the offer and hook — channel tactics multiply what already converts.</div><a href="#contact" onclick="closeAll()" class="btn-lime rounded-full w-full py-4 mt-6 flex items-center justify-center gap-2 text-[13px]">Get the full playbook <i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>`; lucide.createIcons(); $('#modal').classList.add('show'); document.body.style.overflow='hidden'; };
   c.onclick=open; c.onkeydown=e=>{if(e.key==='Enter')open()}; });
 
 /* ---------- faq ---------- */
@@ -927,7 +986,7 @@ $('#nextBtn').onclick=async()=>{
   function err(m){ const e=$('#ferr'); e.textContent=m; e.classList.remove('hidden'); }
   if(step<3){ step++; renderStep(); $('#formSteps').animate([{opacity:0,transform:'translateX(20px)'},{opacity:1,transform:'none'}],{duration:350,easing:'ease-out'}); return; }
   const btn=$('#nextBtn'); btn.disabled=true; btn.innerHTML=`<span class="inline-flex items-center gap-2"><span class="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin"></span>Sending…</span>`;
-  const res=await submitProjectInquiry({...form, company:($('#fCo')?.value||""), phone:($('#fPhone')?.value||""), projectType:"phase1-inquiry", submittedAt:new Date().toISOString(), source:"nexora-site-phase1"});
+  const res=await submitProjectInquiry({...form, company:($('#fCo')?.value||""), phone:($('#fPhone')?.value||""), projectType:"phase1-inquiry", submittedAt:new Date().toISOString(), source:"gromatic-space-site"});
   $('#formSteps').innerHTML=`<div class="text-center py-8"><div class="w-20 h-20 mx-auto rounded-full bg-[#D4FF3F] flex items-center justify-center"><i data-lucide="check" class="w-10 h-10 text-black"></i></div><h3 class="font-display font-black text-[28px] mt-5">Inquiry received.</h3><p class="text-white/55 mt-2 text-[14px]">Reference <b class="text-[#D4FF3F]">${res.id}</b> — we'll reply within 1 business day with honest next steps.</p><button onclick="step=0;renderStep();$('#nextBtn').disabled=false;" class="btn-ghost rounded-full px-6 py-3 text-[13px] mt-6">Send another</button></div>`;
   lucide.createIcons(); $('#formProg').style.width='100%'; btn.disabled=false; btn.textContent="Done ✓"; toast("Project inquiry sent — reference "+res.id);
 };
@@ -952,7 +1011,7 @@ const novaKB=[
   {k:["roas","return","results","proof","case"],a:"Blended ROAS across partners averages 3.7x (demo figure). Featured: Nova Skin hit 3.9x in 90 days, Lumera 4.1x. Scroll to Selected Work or ask about your industry."},
   {k:["timeline","how long","fast","results when"],a:"Paid signal in 14–21 days, compounding by day 60–90. SEO compounds over 3–6 months. Our launch sprint is 21 days from kickoff to live."},
   {k:["process","how work","steps","onboard"],a:"6 steps: Discover → Strategy → Create → Launch → Optimize → Scale. You approve a forecast before we spend a pound."},
-  {k:["contact","call","talk","human","email","phone"],a:"You can reach us at hello@nexoragrowth.co or 01331740859. Or use the Contact section — we reply within 1 business day."},
+  {k:["contact","call","talk","human","email","phone"],a:"You can reach us at hello@gromaticspace.com or 01331740859. Or use the Contact section — we reply within 1 business day."},
   {k:["ecommerce","e-commerce","shopify","dtc"],a:"For DTC we focus on hero SKUs, UGC engines and PDP CRO + upsells. Pattern: Lumera hit +184% revenue with AOV +31%. What's your current conversion rate?"},
   {k:["leads","lead gen","b2b","real estate"],a:"Our lead systems pair Google + Meta with instant routing and nurture — Urbankey saw +68% qualified viewings. What's your current cost per lead?"},
   {k:["budget","spend","minimum"],a:"Most partners spend £3k–£50k/mo on media. If you're under £3k, start with one channel done well — we'll tell you honestly on the intro call."},
@@ -961,7 +1020,7 @@ const novaKB=[
   {k:["team","who","founder"],a:"We're a 14-person senior team led by Adrian Vale (ex-agency director, £30M+ managed). No juniors learning on your budget."},
   {k:["location","where","based"],a:"We're in London with partners in the US and Gulf — fully remote-capable with Slack + weekly Looms."},
   {k:["contract","commit","cancel"],a:"Monthly rolling after a 90-day sprint. 92% stay past month six — by choice, not contract."},
-  {k:["hi","hello","hey","yo"],a:"Hey! I'm NOVA, Nexora's demo assistant. Ask me about services, pricing, results, timelines — or tap a suggestion below."},
+  {k:["hi","hello","hey","yo"],a:"Hey! I'm NOVA, Gromatic Space's demo assistant. Ask me about services, pricing, results, timelines — or tap a suggestion below."},
   {k:["thank","thanks","great"],a:"Anytime! If you want a human to scope your growth plan, hit the Contact form — free 30-min audit included."},
 ];
 function aiReply(q){ const box=$('#chatMsgs'); const t=document.createElement('div'); t.className='flex gap-2 items-end'; t.innerHTML=`<div class="w-7 h-7 rounded-full bg-[#D4FF3F] text-black flex items-center justify-center text-[11px] font-black shrink-0">N</div><div class="bg-white/[0.07] border border-white/10 rounded-2xl rounded-bl-md px-4 py-3 text-[13px] typing"><span></span> <span></span> <span></span></div>`; box.appendChild(t); box.scrollTop=box.scrollHeight;
@@ -971,13 +1030,12 @@ function aiReply(q){ const box=$('#chatMsgs'); const t=document.createElement('d
 function sendUser(txt){ const box=$('#chatMsgs'); const d=document.createElement('div'); d.className='flex justify-end'; d.innerHTML=`<div class="bg-[#D4FF3F] text-black rounded-2xl rounded-br-md px-4 py-3 text-[13px] font-medium max-w-[85%]">${txt}</div>`; box.appendChild(d); box.scrollTop=box.scrollHeight; }
 function wireChat(){ const inp=$('#chatIn'); const go=()=>{ const v=inp.value.trim(); if(!v)return; inp.value=''; sendUser(v); aiReply(v); }; $('#chatSend').onclick=go; inp.addEventListener('keydown',e=>{if(e.key==='Enter')go();});
   const chips=["Pricing?","Do you do SEO?","Show results","How fast?","I need more leads","Book a call"]; $('#chips').innerHTML=chips.map(c=>`<button class="shrink-0 text-[11px] font-bold px-3 py-2 rounded-full hairline text-white/60 hover:border-[#D4FF3F] hover:text-[#D4FF3F] transition">${c}</button>`).join(''); $$('#chips button').forEach(b=>b.onclick=()=>{sendUser(b.textContent);aiReply(b.textContent);});
-  $('#chatMsgs').innerHTML=`<div class="flex gap-2"><div class="w-7 h-7 rounded-full bg-[#D4FF3F] text-black flex items-center justify-center text-[11px] font-black shrink-0">N</div><div class="bg-white/[0.07] border border-white/10 rounded-2xl rounded-bl-md px-4 py-3 text-[13px]">Hey, I'm <b>NOVA</b> — Nexora's demo AI. Ask about services, pricing, timelines or results. <span class="text-white/50">No real API — local demo logic.</span></div></div>`;
+  $('#chatMsgs').innerHTML=`<div class="flex gap-2"><img src="/gromatic-mark.svg" class="w-7 h-7 object-contain shrink-0" alt=""/><div class="bg-white/[0.07] border border-white/10 rounded-2xl rounded-bl-md px-4 py-3 text-[13px]">Hey, I'm <b>NOVA</b> — Gromatic Space's demo AI. Ask about services, pricing, timelines or results. <span class="text-white/50">No real API — local demo logic.</span></div></div>`;
 }
 wireChat();
 
 /* ---------- simple hash router (Future: role-based routing) ---------- */
 function route(){ const h=location.hash||"#/";
-  $$('#dotsMenu').forEach(m=>m.classList.add('hidden'));
   if(h.startsWith("#/login")||h.startsWith("#/portal")||h.startsWith("#/work")){
     $('#view-main').classList.add('hidden'); $('#view-sub').classList.remove('hidden'); scrollTo(0,0);
     if(h.startsWith("#/login")) renderLogin();
@@ -990,7 +1048,7 @@ function shell(inner){ $('#subContent').innerHTML=`<a href="#/" class="inline-fl
 function renderLogin(){ shell(`
   <div class="max-w-[520px] mx-auto glass2 rounded-[28px] p-8 md:p-10 text-center relative overflow-hidden">
     <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#D4FF3F] via-[#4DE8FF] to-[#7C5CFF]"></div>
-    <div class="w-14 h-14 mx-auto rounded-2xl bg-[#D4FF3F] flex items-center justify-center font-display font-black text-black text-2xl">N</div>
+    <img src="/gromatic-mark.svg" class="w-16 h-16 mx-auto object-contain mb-3 drop-shadow-[0_0_16px_rgba(59,130,246,0.5)]" alt="Gromatic Space"/>
     <h2 class="font-display font-black text-[32px] mt-5">Client Portal</h2><p class="text-white/55 text-[14px] mt-2">Choose a demo role to preview the portal shell.</p>
     <div class="grid grid-cols-2 gap-3 mt-7">${["Founder","Manager","Employee","Client"].map(r=>`<a href="#/portal/${r.toLowerCase()}" class="rounded-2xl border border-white/12 py-5 hover:bg-[#D4FF3F] hover:text-black hover:border-[#D4FF3F] transition group"><div class="font-display font-black">${r}</div><div class="text-[11px] opacity-60">Demo access →</div></a>`).join('')}</div>
     <div class="mt-6 hairline rounded-2xl p-4 text-[12px] text-white/50 bg-white/[0.02]">Portal integration coming in the next build phase. No real auth in Phase 1 — UI shell only.</div>

@@ -1,8 +1,8 @@
 {
-  "name": "nexora-growth",
+  "name": "gromatic-space",
   "version": "1.0.0",
   "private": true,
-  "description": "Nexora Growth - Creative systems built to make attention convert",
+  "description": "Gromatic Space - Creative systems built to make attention convert",
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
